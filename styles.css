@@ -1,0 +1,15 @@
+body{
+  text_align:centre;
+  background_color:#f0f0f0;
+}
+.toolbar{
+  margin:10px;
+  display:flex;
+  justify_content:centre;
+  gap:10px;
+}
+canvas{
+border:2px solid black;
+  background_color: white;
+  cursor: crosshair;
+}
