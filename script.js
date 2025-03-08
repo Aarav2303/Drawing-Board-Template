@@ -1,4 +1,4 @@
-const canvas=document.getElement("drawingBoard");
+const canvas=document.getElementById("drawingBoard");
 const ctx=canvas.getContext("2d");
 //Setting canvas size
 canvas.width=window.innerWidth-20;
@@ -20,20 +20,20 @@ function draw(event){
   ctx.lineTo(event.clientX-canvas.offsetLeft,event.clientY-canvas.offetTop);
 }
 //Color Picker
-document.getElement("colorPicker").addEventListener("input",(e)=> {
+document.getElementById("colorPicker").addEventListener("input",(e)=> {
   brushColor=e.target.value;
 });
 //Brush Size
-document.getElement("brushSize").addEventListener("click",()=> {
+document.getElementById("brushSize").addEventListener("click",()=> {
   brushSize=e.target.value;
 });
 //Clear Canvas
-document.getElement("clearCanvas").addEventListener("click",()=> {
+document.getElementById("clearCanvas").addEventListener("click",()=> {
   ctx.clearRect(0,0,canvas.width,canvas.height);
 });
 //Save Image
-document.getElement("saveElement").addEventListener("click",()-> {
-  const link=document.clearElement("a");
+document.getElementById("saveElement").addEventListener("click",()=> {
+  const link=document.creatElement("a");
 link.download="drawing.png";
 link.href=canvas.toDataURL();
 link.click();
